@@ -30,6 +30,8 @@ namespace Inventory_v01
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +62,7 @@ namespace Inventory_v01
             this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salesToolStripMenuItem,
             this.itemsToolStripMenuItem,
             this.customersToolStripMenuItem,
             this.stockToolStripMenuItem,
@@ -71,8 +74,23 @@ namespace Inventory_v01
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(1264, 33);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // salesToolStripMenuItem
+            // 
+            this.salesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addSaleToolStripMenuItem});
+            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.salesToolStripMenuItem.Text = "Sales";
+            // 
+            // addSaleToolStripMenuItem
+            // 
+            this.addSaleToolStripMenuItem.Name = "addSaleToolStripMenuItem";
+            this.addSaleToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
+            this.addSaleToolStripMenuItem.Text = "Add Sale";
+            this.addSaleToolStripMenuItem.Click += new System.EventHandler(this.addSaleToolStripMenuItem_Click);
             // 
             // itemsToolStripMenuItem
             // 
@@ -236,7 +254,7 @@ namespace Inventory_v01
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frm_purchasing";
-            this.Text = "frm_purchasing";
+            this.Text = "Add purchasing";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -247,6 +265,8 @@ namespace Inventory_v01
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addSaleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageItemsToolStripMenuItem;

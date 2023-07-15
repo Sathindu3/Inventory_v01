@@ -90,6 +90,7 @@ namespace Inventory_v01
             this.addSaleToolStripMenuItem.Name = "addSaleToolStripMenuItem";
             this.addSaleToolStripMenuItem.Size = new System.Drawing.Size(164, 30);
             this.addSaleToolStripMenuItem.Text = "Add Sale";
+            this.addSaleToolStripMenuItem.Click += new System.EventHandler(this.addSaleToolStripMenuItem_Click);
             // 
             // itemsToolStripMenuItem
             // 
@@ -253,7 +254,7 @@ namespace Inventory_v01
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frm_stock";
-            this.Text = "frm_stock";
+            this.Text = "Stock";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

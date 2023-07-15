@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Inventory_v01
 {
-    public partial class frm_sale : Form
+    public partial class frm_saleHistory : Form
     {
-        public frm_sale()
+        public frm_saleHistory()
         {
             InitializeComponent();
+        }
+
+        private void addSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_sale sale = new frm_sale();
+            this.Hide();
+            sale.Show();
         }
     }
 }

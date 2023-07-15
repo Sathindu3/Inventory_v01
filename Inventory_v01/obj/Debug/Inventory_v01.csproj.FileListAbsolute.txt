@@ -7,7 +7,6 @@ C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.csproj.CoreCompileInputs.cache
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.exe
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.pdb
-C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_about.resources
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_customer.resources
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_item.resources
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_login.resources
@@ -15,3 +14,16 @@ C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_records.resources
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_sale.resources
 C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_stock.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_allCustomer.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_allItem.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_help.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_incomeExpenses.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_license.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_manageCustomer.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_manageItem.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_managePurchasing.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_purchasingHistory.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_saleHistory.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\bin\Debug\MySql.Data.dll
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.csproj.CopyComplete
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_configuration.resources

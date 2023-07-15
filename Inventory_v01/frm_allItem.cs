@@ -16,5 +16,12 @@ namespace Inventory_v01
         {
             InitializeComponent();
         }
+
+        private void addSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_sale sale = new frm_sale();
+            this.Hide();
+            sale.Show();
+        }
     }
 }

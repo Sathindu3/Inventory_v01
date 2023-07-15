@@ -1,7 +1,7 @@
 ﻿
 namespace Inventory_v01
 {
-    partial class frm_manageItem
+    partial class frm_sale
     {
         /// <summary>
         /// Required designer variable.
@@ -107,6 +107,7 @@ namespace Inventory_v01
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
             this.addItemToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.addItemToolStripMenuItem.Text = "Add item";
+            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
             // 
             // manageItemsToolStripMenuItem
             // 
@@ -239,6 +240,7 @@ namespace Inventory_v01
             this.aboutSoftwareToolStripMenuItem.Name = "aboutSoftwareToolStripMenuItem";
             this.aboutSoftwareToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.aboutSoftwareToolStripMenuItem.Text = "About Software";
+            this.aboutSoftwareToolStripMenuItem.Click += new System.EventHandler(this.aboutSoftwareToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -246,15 +248,15 @@ namespace Inventory_v01
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // frm_manageItem
+            // frm_sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "frm_manageItem";
-            this.Text = "Manage Item";
+            this.Name = "frm_sale";
+            this.Text = "Add Sale";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

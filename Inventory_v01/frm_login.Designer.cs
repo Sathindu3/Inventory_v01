@@ -155,7 +155,7 @@ namespace Inventory_v01
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frm_login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

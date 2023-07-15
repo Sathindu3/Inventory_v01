@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Inventory_v01
 {
-    public partial class frm_stock : Form
+    public partial class frm_configuration : Form
     {
-        public frm_stock()
+        public frm_configuration()
         {
             InitializeComponent();
         }
@@ -22,6 +22,11 @@ namespace Inventory_v01
             frm_sale sale = new frm_sale();
             this.Hide();
             sale.Show();
+        }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
