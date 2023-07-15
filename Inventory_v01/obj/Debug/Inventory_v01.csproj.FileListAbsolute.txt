@@ -1,0 +1,17 @@
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\bin\Debug\Inventory_v01.exe.config
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\bin\Debug\Inventory_v01.exe
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\bin\Debug\Inventory_v01.pdb
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.csproj.AssemblyReference.cache
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.Properties.Resources.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.csproj.GenerateResource.cache
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.csproj.CoreCompileInputs.cache
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.exe
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.pdb
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_about.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_customer.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_item.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_login.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_purchasing.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_records.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_sale.resources
+C:\Users\wONd3r\source\repos\Inventory_v01\Inventory_v01\obj\Debug\Inventory_v01.frm_stock.resources

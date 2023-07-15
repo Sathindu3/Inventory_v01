@@ -46,14 +46,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_about.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_about.Designer.cs">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_customer.Designer.cs">
+      <DependentUpon>frm_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_item.Designer.cs">
+      <DependentUpon>frm_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_purchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_purchasing.Designer.cs">
+      <DependentUpon>frm_purchasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_records.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_records.Designer.cs">
+      <DependentUpon>frm_records.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sale.Designer.cs">
+      <DependentUpon>frm_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_stock.Designer.cs">
+      <DependentUpon>frm_stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_about.resx">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_customer.resx">
+      <DependentUpon>frm_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_item.resx">
+      <DependentUpon>frm_item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_purchasing.resx">
+      <DependentUpon>frm_purchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_records.resx">
+      <DependentUpon>frm_records.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sale.resx">
+      <DependentUpon>frm_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_stock.resx">
+      <DependentUpon>frm_stock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
