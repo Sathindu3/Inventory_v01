@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
+
 //using System;
 //using System.Collections.Generic;
 
@@ -17,10 +19,34 @@ namespace Inventory_v01
 {
 
     public partial class frm_sale : Form
+
+
+
+
     {
+        private LinkedList<string> linkedList;
+      //  public partial class Form1 : Form
+     
+                  
+
+         
+    
+           private void addButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+        private void UpdateListBox()
+        {
+            //listBox.Items.Clear();
+            //foreach (var item in linkedList)
+            //{
+            //    listBox.Items.Add(item);
+            //}
+        }
         public frm_sale()
         {
             InitializeComponent();
+            linkedList = new LinkedList<string>();
         }
         public void fndataLoad()
         {
@@ -65,8 +91,66 @@ namespace Inventory_v01
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            //string item = cmb_itemName.Text;
+            //linkedList.AddLast(item);
+            //UpdateListBox();
+            //label3.Text = item;
+
+            //inputTextBox.Clear();
+
+            string item = cmb_itemName.Text;
+            linkedList.AddLast(item);
+            UpdateLabels();
+
+            string qty = txt_quantity.Text;
+            linkedList.AddLast(qty);
+            Update_qty_Labels();
 
         }
+        private void UpdateLabels()
+        {
+            int labelIndex = 1;
+            foreach (var item in linkedList)
+            {
+                Label name = Controls.Find("lbl_item" + labelIndex, true)[0] as Label;
+                name.Text = item;
+                labelIndex++;
+
+              
+            }
+            //for (int i = labelIndex; i <= 3; i++)
+            //{
+            //    Label label = Controls.Find("label" + i, true)[0] as Label;
+            //    label.Text = string.Empty;
+            //}
+        }
+        private void Update_qty_Labels()
+        {
+            int labelIndex = 1;
+            foreach (var item in linkedList)
+            {
+               
+
+                Label qty = Controls.Find("lbl_qty" + labelIndex, true)[0] as Label;
+                qty.Text = item;
+                labelIndex++;
+            }
+            //for (int i = labelIndex; i <= 3; i++)
+            //{
+            //    Label label = Controls.Find("label" + i, true)[0] as Label;
+            //    label.Text = string.Empty;
+            //}
+        }
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            if (linkedList.Count > 0)
+            {
+                linkedList.RemoveLast();
+                UpdateLabels();
+            }
+        }
+
+      
 
         private void dgv_item_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -77,6 +161,26 @@ namespace Inventory_v01
                 cmb_itemName.Text = dgvrow.Cells[1].Value.ToString();
                 txt_sellingPrice.Text = dgvrow.Cells[5].Value.ToString();
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
 
 
