@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,19 @@ namespace Inventory_v01
             frm_sale sale = new frm_sale();
             this.Hide();
             sale.Show();
+        }
+
+        private void frm_allItem_Load(object sender, EventArgs e)
+        {
+            fndataLoad();
+        }
+        public void fndataLoad()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("Select * from item", cls_connection.con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "dgv_item");
+            dgv_item.DataSource = ds.Tables["dgv_item"].DefaultView;
+
         }
     }
 }

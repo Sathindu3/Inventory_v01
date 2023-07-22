@@ -54,7 +54,9 @@ namespace Inventory_v01
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgv_item = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_item)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -246,17 +248,28 @@ namespace Inventory_v01
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // dgv_item
+            // 
+            this.dgv_item.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_item.Location = new System.Drawing.Point(265, 128);
+            this.dgv_item.Name = "dgv_item";
+            this.dgv_item.Size = new System.Drawing.Size(734, 424);
+            this.dgv_item.TabIndex = 12;
+            // 
             // frm_allItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dgv_item);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frm_allItem";
             this.Text = "All items";
+            this.Load += new System.EventHandler(this.frm_allItem_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_item)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +302,6 @@ namespace Inventory_v01
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSoftwareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgv_item;
     }
 }

@@ -59,6 +59,8 @@ namespace Inventory_v01
             this.txt_quantity = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label134 = new System.Windows.Forms.Label();
@@ -101,7 +103,7 @@ namespace Inventory_v01
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(1264, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 33);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -142,12 +144,14 @@ namespace Inventory_v01
             this.manageItemsToolStripMenuItem.Name = "manageItemsToolStripMenuItem";
             this.manageItemsToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.manageItemsToolStripMenuItem.Text = "Manage items";
+            this.manageItemsToolStripMenuItem.Click += new System.EventHandler(this.manageItemsToolStripMenuItem_Click);
             // 
             // viewAllItemsToolStripMenuItem
             // 
             this.viewAllItemsToolStripMenuItem.Name = "viewAllItemsToolStripMenuItem";
             this.viewAllItemsToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.viewAllItemsToolStripMenuItem.Text = "View All Items";
+            this.viewAllItemsToolStripMenuItem.Click += new System.EventHandler(this.viewAllItemsToolStripMenuItem_Click);
             // 
             // customersToolStripMenuItem
             // 
@@ -283,15 +287,17 @@ namespace Inventory_v01
             this.groupBox1.Controls.Add(this.txt_quantity);
             this.groupBox1.Controls.Add(this.btn_add);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label134);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_sellingPrice);
             this.groupBox1.Controls.Add(this.txt_itemCode);
-            this.groupBox1.Location = new System.Drawing.Point(12, 79);
+            this.groupBox1.Location = new System.Drawing.Point(70, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 412);
+            this.groupBox1.Size = new System.Drawing.Size(420, 469);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item Details";
@@ -332,6 +338,26 @@ namespace Inventory_v01
             this.label2.Size = new System.Drawing.Size(70, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Quantity";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(125, 282);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 21);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Selling Price";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 282);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Available stock";
             // 
             // label5
             // 
@@ -405,7 +431,7 @@ namespace Inventory_v01
             this.panel1.Controls.Add(this.lbl_item2);
             this.panel1.Controls.Add(this.lbl_qty1);
             this.panel1.Controls.Add(this.lbl_item1);
-            this.panel1.Location = new System.Drawing.Point(901, 79);
+            this.panel1.Location = new System.Drawing.Point(1541, 79);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(342, 504);
             this.panel1.TabIndex = 9;
@@ -528,7 +554,7 @@ namespace Inventory_v01
             // 
             this.dgv_item.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgv_item.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_item.Location = new System.Drawing.Point(415, 79);
+            this.dgv_item.Location = new System.Drawing.Point(644, 82);
             this.dgv_item.Name = "dgv_item";
             this.dgv_item.Size = new System.Drawing.Size(636, 409);
             this.dgv_item.TabIndex = 10;
@@ -539,7 +565,7 @@ namespace Inventory_v01
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.dgv_item);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -612,5 +638,7 @@ namespace Inventory_v01
         private System.Windows.Forms.Label lbl_item2;
         private System.Windows.Forms.Label lbl_qty1;
         private System.Windows.Forms.Label lbl_item1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -183,6 +183,20 @@ namespace Inventory_v01
 
         }
 
+        private void manageItemsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_manageItem manageItem = new frm_manageItem();
+            this.Hide();
+            manageItem.Show();
+
+        }
+
+        private void viewAllItemsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_allItem allItem = new frm_allItem();
+            allItem.Show();
+        }
+
 
         //        using System;
         //using System.Collections.Generic;
