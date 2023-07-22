@@ -168,6 +168,7 @@ namespace Inventory_v01
             this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
             this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(342, 30);
             this.addCustomerToolStripMenuItem.Text = "Add Customer/Supplier";
+            this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.addCustomerToolStripMenuItem_Click);
             // 
             // manageCustomersToolStripMenuItem
             // 

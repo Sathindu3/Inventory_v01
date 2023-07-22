@@ -54,7 +54,22 @@ namespace Inventory_v01
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.txt_cusName = new System.Windows.Forms.TextBox();
+            this.cmb_type = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_address = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_mobile = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_mail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgv_customer = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_customer)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -246,17 +261,145 @@ namespace Inventory_v01
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btn_save);
+            this.panel1.Controls.Add(this.cmb_type);
+            this.panel1.Controls.Add(this.txt_mail);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txt_mobile);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txt_address);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txt_cusName);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(87, 109);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(333, 395);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Customer name";
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(213, 356);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.TabIndex = 6;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // txt_cusName
+            // 
+            this.txt_cusName.Location = new System.Drawing.Point(145, 60);
+            this.txt_cusName.Name = "txt_cusName";
+            this.txt_cusName.Size = new System.Drawing.Size(143, 20);
+            this.txt_cusName.TabIndex = 7;
+            // 
+            // cmb_type
+            // 
+            this.cmb_type.FormattingEnabled = true;
+            this.cmb_type.Items.AddRange(new object[] {
+            "Buyer",
+            "Seller"});
+            this.cmb_type.Location = new System.Drawing.Point(145, 140);
+            this.cmb_type.Name = "cmb_type";
+            this.cmb_type.Size = new System.Drawing.Size(143, 21);
+            this.cmb_type.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Address";
+            // 
+            // txt_address
+            // 
+            this.txt_address.Location = new System.Drawing.Point(145, 167);
+            this.txt_address.Multiline = true;
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(143, 69);
+            this.txt_address.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Mobile number";
+            // 
+            // txt_mobile
+            // 
+            this.txt_mobile.Location = new System.Drawing.Point(145, 88);
+            this.txt_mobile.Name = "txt_mobile";
+            this.txt_mobile.Size = new System.Drawing.Size(143, 20);
+            this.txt_mobile.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "E-mail";
+            // 
+            // txt_mail
+            // 
+            this.txt_mail.Location = new System.Drawing.Point(145, 114);
+            this.txt_mail.Name = "txt_mail";
+            this.txt_mail.Size = new System.Drawing.Size(143, 20);
+            this.txt_mail.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Customer type";
+            // 
+            // dgv_customer
+            // 
+            this.dgv_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_customer.Location = new System.Drawing.Point(529, 109);
+            this.dgv_customer.Name = "dgv_customer";
+            this.dgv_customer.Size = new System.Drawing.Size(704, 394);
+            this.dgv_customer.TabIndex = 5;
+            // 
             // frm_customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dgv_customer);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frm_customer";
             this.Text = "Customer";
+            this.Load += new System.EventHandler(this.frm_customer_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_customer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +432,18 @@ namespace Inventory_v01
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSoftwareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.ComboBox cmb_type;
+        private System.Windows.Forms.TextBox txt_mail;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_mobile;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_address;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_cusName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgv_customer;
     }
 }

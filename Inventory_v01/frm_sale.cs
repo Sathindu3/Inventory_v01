@@ -197,6 +197,12 @@ namespace Inventory_v01
             allItem.Show();
         }
 
+        private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_customer customer = new frm_customer();
+            customer.Show();
+        }
+
 
         //        using System;
         //using System.Collections.Generic;
