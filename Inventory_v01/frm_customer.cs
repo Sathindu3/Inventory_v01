@@ -36,7 +36,7 @@ namespace Inventory_v01
         private void btn_save_Click(object sender, EventArgs e)
         {
             cls_connection.open_connection();
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO `customer`( `cus_name`, `email`, `mobile_number`, `address`, `type`) VALUES ('cus_name','email','mobile_number','address','type')", cls_connection.con);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO `customer`( `cus_name`, `email`, `mobile_number`, `address`, `type`) VALUES (@cus_name,@email,@mobile_number,@address,@type)", cls_connection.con);
             cmd.Parameters.Clear();
 
             cmd.Parameters.AddWithValue("@cus_name", txt_cusName.Text);

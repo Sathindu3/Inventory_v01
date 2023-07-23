@@ -211,6 +211,7 @@ namespace Inventory_v01
             this.addPurchasingToolStripMenuItem.Name = "addPurchasingToolStripMenuItem";
             this.addPurchasingToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
             this.addPurchasingToolStripMenuItem.Text = "Add Purchasing";
+            this.addPurchasingToolStripMenuItem.Click += new System.EventHandler(this.addPurchasingToolStripMenuItem_Click);
             // 
             // editPurchasingToolStripMenuItem
             // 

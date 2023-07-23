@@ -203,6 +203,12 @@ namespace Inventory_v01
             customer.Show();
         }
 
+        private void addPurchasingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_purchasing purchasing = new frm_purchasing();
+            purchasing.Show();
+        }
+
 
         //        using System;
         //using System.Collections.Generic;
