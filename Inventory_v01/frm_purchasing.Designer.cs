@@ -54,7 +54,7 @@ namespace Inventory_v01
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_purchase = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -261,14 +261,15 @@ namespace Inventory_v01
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(226, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // button1
+            // btn_purchase
             // 
-            this.button1.Location = new System.Drawing.Point(427, 549);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Purchase";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_purchase.Location = new System.Drawing.Point(427, 549);
+            this.btn_purchase.Name = "btn_purchase";
+            this.btn_purchase.Size = new System.Drawing.Size(75, 23);
+            this.btn_purchase.TabIndex = 4;
+            this.btn_purchase.Text = "Purchase";
+            this.btn_purchase.UseVisualStyleBackColor = true;
+            this.btn_purchase.Click += new System.EventHandler(this.btn_purchase_Click);
             // 
             // label1
             // 
@@ -390,7 +391,7 @@ namespace Inventory_v01
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_purchase);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frm_purchasing";
             this.Text = "Add purchasing";
@@ -432,7 +433,7 @@ namespace Inventory_v01
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSoftwareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_purchase;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;

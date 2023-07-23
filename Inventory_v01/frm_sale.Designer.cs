@@ -68,12 +68,12 @@ namespace Inventory_v01
             this.txt_sellingPrice = new System.Windows.Forms.TextBox();
             this.txt_itemCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_tot3 = new System.Windows.Forms.Label();
+            this.lbl_tot2 = new System.Windows.Forms.Label();
+            this.lbl_tot1 = new System.Windows.Forms.Label();
+            this.lbl_unit3 = new System.Windows.Forms.Label();
+            this.lbl_unit2 = new System.Windows.Forms.Label();
+            this.lbl_unit1 = new System.Windows.Forms.Label();
             this.lbl_qty3 = new System.Windows.Forms.Label();
             this.lbl_item3 = new System.Windows.Forms.Label();
             this.lbl_qty2 = new System.Windows.Forms.Label();
@@ -421,12 +421,12 @@ namespace Inventory_v01
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lbl_tot3);
+            this.panel1.Controls.Add(this.lbl_tot2);
+            this.panel1.Controls.Add(this.lbl_tot1);
+            this.panel1.Controls.Add(this.lbl_unit3);
+            this.panel1.Controls.Add(this.lbl_unit2);
+            this.panel1.Controls.Add(this.lbl_unit1);
             this.panel1.Controls.Add(this.lbl_qty3);
             this.panel1.Controls.Add(this.lbl_item3);
             this.panel1.Controls.Add(this.lbl_qty2);
@@ -438,63 +438,63 @@ namespace Inventory_v01
             this.panel1.Size = new System.Drawing.Size(342, 504);
             this.panel1.TabIndex = 9;
             // 
-            // label16
+            // lbl_tot3
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(276, 134);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "label3";
-            this.label16.Click += new System.EventHandler(this.label12_Click);
+            this.lbl_tot3.AutoSize = true;
+            this.lbl_tot3.Location = new System.Drawing.Point(276, 134);
+            this.lbl_tot3.Name = "lbl_tot3";
+            this.lbl_tot3.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot3.TabIndex = 0;
+            this.lbl_tot3.Text = "label3";
+            this.lbl_tot3.Click += new System.EventHandler(this.label12_Click);
             // 
-            // label12
+            // lbl_tot2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(276, 96);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "label3";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.lbl_tot2.AutoSize = true;
+            this.lbl_tot2.Location = new System.Drawing.Point(276, 96);
+            this.lbl_tot2.Name = "lbl_tot2";
+            this.lbl_tot2.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot2.TabIndex = 0;
+            this.lbl_tot2.Text = "label3";
+            this.lbl_tot2.Click += new System.EventHandler(this.label12_Click);
             // 
-            // label8
+            // lbl_tot1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(276, 62);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "label3";
+            this.lbl_tot1.AutoSize = true;
+            this.lbl_tot1.Location = new System.Drawing.Point(276, 62);
+            this.lbl_tot1.Name = "lbl_tot1";
+            this.lbl_tot1.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot1.TabIndex = 0;
+            this.lbl_tot1.Text = "label3";
             // 
-            // label15
+            // lbl_unit3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(208, 134);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "label3";
-            this.label15.Click += new System.EventHandler(this.label11_Click);
+            this.lbl_unit3.AutoSize = true;
+            this.lbl_unit3.Location = new System.Drawing.Point(208, 134);
+            this.lbl_unit3.Name = "lbl_unit3";
+            this.lbl_unit3.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit3.TabIndex = 0;
+            this.lbl_unit3.Text = "label3";
+            this.lbl_unit3.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label11
+            // lbl_unit2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(208, 96);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "label3";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.lbl_unit2.AutoSize = true;
+            this.lbl_unit2.Location = new System.Drawing.Point(208, 96);
+            this.lbl_unit2.Name = "lbl_unit2";
+            this.lbl_unit2.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit2.TabIndex = 0;
+            this.lbl_unit2.Text = "label3";
+            this.lbl_unit2.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label6
+            // lbl_unit1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(208, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label3";
+            this.lbl_unit1.AutoSize = true;
+            this.lbl_unit1.Location = new System.Drawing.Point(208, 62);
+            this.lbl_unit1.Name = "lbl_unit1";
+            this.lbl_unit1.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit1.TabIndex = 0;
+            this.lbl_unit1.Text = "label3";
             // 
             // lbl_qty3
             // 
@@ -628,12 +628,12 @@ namespace Inventory_v01
         private System.Windows.Forms.ComboBox cmb_itemName;
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.DataGridView dgv_item;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_tot3;
+        private System.Windows.Forms.Label lbl_tot2;
+        private System.Windows.Forms.Label lbl_tot1;
+        private System.Windows.Forms.Label lbl_unit3;
+        private System.Windows.Forms.Label lbl_unit2;
+        private System.Windows.Forms.Label lbl_unit1;
         private System.Windows.Forms.Label lbl_qty3;
         private System.Windows.Forms.Label lbl_item3;
         private System.Windows.Forms.Label lbl_qty2;

@@ -23,5 +23,10 @@ namespace Inventory_v01
             this.Hide();
             sale.Show();
         }
+
+        private void btn_purchase_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

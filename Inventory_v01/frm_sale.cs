@@ -59,22 +59,22 @@ namespace Inventory_v01
 
         private void addSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_sale sale = new frm_sale();
-            this.Hide();
-            sale.Show();
+            //frm_sale sale = new frm_sale();
+            //this.Hide();
+            //sale.Show();
         }
 
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_item item = new frm_item();
-            this.Hide();
+            //this.Hide();
             item.Show();
         }
 
         private void aboutSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_configuration config = new frm_configuration();
-            this.Hide();
+           // this.Hide();
             config.Show();
         }
 
@@ -103,18 +103,18 @@ namespace Inventory_v01
             UpdateLabels();
 
             string qty = txt_quantity.Text;
-            linkedList.AddLast(qty);
+            linkedList2.AddLast(qty);
             Update_qty_Labels();
 
         }
         private void UpdateLabels()
         {
-            int labelIndex = 1;
+            int labelIndex_item = 1;
             foreach (var item in linkedList)
             {
-                Label name = Controls.Find("lbl_item" + labelIndex, true)[0] as Label;
+                Label name = Controls.Find("lbl_item" + labelIndex_item, true)[0] as Label;
                 name.Text = item;
-                labelIndex++;
+                labelIndex_item++;
 
               
             }
@@ -126,14 +126,14 @@ namespace Inventory_v01
         }
         private void Update_qty_Labels()
         {
-            int labelIndex = 1;
-            foreach (var item in linkedList)
+            int labelIndex_qty = 1;
+            foreach (var qty in linkedList2)
             {
                
 
-                Label qty = Controls.Find("lbl_qty" + labelIndex, true)[0] as Label;
-                qty.Text = item;
-                labelIndex++;
+                Label qty1 = Controls.Find("lbl_qty" + labelIndex_qty, true)[0] as Label;
+                qty1.Text = qty;
+                labelIndex_qty++;
             }
             //for (int i = labelIndex; i <= 3; i++)
             //{
@@ -186,7 +186,7 @@ namespace Inventory_v01
         private void manageItemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_manageItem manageItem = new frm_manageItem();
-            this.Hide();
+           // this.Hide();
             manageItem.Show();
 
         }
