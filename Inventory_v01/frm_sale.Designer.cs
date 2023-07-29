@@ -68,6 +68,35 @@ namespace Inventory_v01
             this.txt_sellingPrice = new System.Windows.Forms.TextBox();
             this.txt_itemCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_remove1 = new System.Windows.Forms.Button();
+            this.lbl_tot10 = new System.Windows.Forms.Label();
+            this.lbl_unit10 = new System.Windows.Forms.Label();
+            this.lbl_qty10 = new System.Windows.Forms.Label();
+            this.lbl_item10 = new System.Windows.Forms.Label();
+            this.lbl_tot9 = new System.Windows.Forms.Label();
+            this.lbl_unit9 = new System.Windows.Forms.Label();
+            this.lbl_qty9 = new System.Windows.Forms.Label();
+            this.lbl_item9 = new System.Windows.Forms.Label();
+            this.lbl_tot8 = new System.Windows.Forms.Label();
+            this.lbl_unit8 = new System.Windows.Forms.Label();
+            this.lbl_qty8 = new System.Windows.Forms.Label();
+            this.lbl_item8 = new System.Windows.Forms.Label();
+            this.lbl_tot7 = new System.Windows.Forms.Label();
+            this.lbl_unit7 = new System.Windows.Forms.Label();
+            this.lbl_qty7 = new System.Windows.Forms.Label();
+            this.lbl_item7 = new System.Windows.Forms.Label();
+            this.lbl_tot6 = new System.Windows.Forms.Label();
+            this.lbl_tot5 = new System.Windows.Forms.Label();
+            this.lbl_unit6 = new System.Windows.Forms.Label();
+            this.lbl_unit5 = new System.Windows.Forms.Label();
+            this.lbl_qty6 = new System.Windows.Forms.Label();
+            this.lbl_tot4 = new System.Windows.Forms.Label();
+            this.lbl_qty5 = new System.Windows.Forms.Label();
+            this.lbl_unit4 = new System.Windows.Forms.Label();
+            this.lbl_item6 = new System.Windows.Forms.Label();
+            this.lbl_qty4 = new System.Windows.Forms.Label();
+            this.lbl_item5 = new System.Windows.Forms.Label();
+            this.lbl_item4 = new System.Windows.Forms.Label();
             this.lbl_tot3 = new System.Windows.Forms.Label();
             this.lbl_tot2 = new System.Windows.Forms.Label();
             this.lbl_tot1 = new System.Windows.Forms.Label();
@@ -81,6 +110,15 @@ namespace Inventory_v01
             this.lbl_qty1 = new System.Windows.Forms.Label();
             this.lbl_item1 = new System.Windows.Forms.Label();
             this.dgv_item = new System.Windows.Forms.DataGridView();
+            this.btn_remove2 = new System.Windows.Forms.Button();
+            this.btn_remove3 = new System.Windows.Forms.Button();
+            this.btn_remove4 = new System.Windows.Forms.Button();
+            this.btn_remove5 = new System.Windows.Forms.Button();
+            this.btn_remove6 = new System.Windows.Forms.Button();
+            this.btn_remove7 = new System.Windows.Forms.Button();
+            this.btn_remove8 = new System.Windows.Forms.Button();
+            this.btn_remove9 = new System.Windows.Forms.Button();
+            this.btn_remove10 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -308,7 +346,7 @@ namespace Inventory_v01
             // 
             this.cmb_itemName.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
             this.cmb_itemName.FormattingEnabled = true;
-            this.cmb_itemName.Location = new System.Drawing.Point(149, 92);
+            this.cmb_itemName.Location = new System.Drawing.Point(149, 55);
             this.cmb_itemName.Name = "cmb_itemName";
             this.cmb_itemName.Size = new System.Drawing.Size(203, 29);
             this.cmb_itemName.TabIndex = 10;
@@ -385,7 +423,7 @@ namespace Inventory_v01
             // 
             this.label134.AutoSize = true;
             this.label134.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label134.Location = new System.Drawing.Point(6, 95);
+            this.label134.Location = new System.Drawing.Point(6, 58);
             this.label134.Name = "label134";
             this.label134.Size = new System.Drawing.Size(87, 21);
             this.label134.TabIndex = 3;
@@ -395,7 +433,7 @@ namespace Inventory_v01
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 58);
+            this.label1.Location = new System.Drawing.Point(6, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 3;
@@ -412,7 +450,7 @@ namespace Inventory_v01
             // txt_itemCode
             // 
             this.txt_itemCode.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_itemCode.Location = new System.Drawing.Point(149, 55);
+            this.txt_itemCode.Location = new System.Drawing.Point(149, 91);
             this.txt_itemCode.Name = "txt_itemCode";
             this.txt_itemCode.Size = new System.Drawing.Size(203, 28);
             this.txt_itemCode.TabIndex = 6;
@@ -421,6 +459,44 @@ namespace Inventory_v01
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btn_remove10);
+            this.panel1.Controls.Add(this.btn_remove9);
+            this.panel1.Controls.Add(this.btn_remove8);
+            this.panel1.Controls.Add(this.btn_remove7);
+            this.panel1.Controls.Add(this.btn_remove6);
+            this.panel1.Controls.Add(this.btn_remove5);
+            this.panel1.Controls.Add(this.btn_remove4);
+            this.panel1.Controls.Add(this.btn_remove3);
+            this.panel1.Controls.Add(this.btn_remove2);
+            this.panel1.Controls.Add(this.btn_remove1);
+            this.panel1.Controls.Add(this.lbl_tot10);
+            this.panel1.Controls.Add(this.lbl_unit10);
+            this.panel1.Controls.Add(this.lbl_qty10);
+            this.panel1.Controls.Add(this.lbl_item10);
+            this.panel1.Controls.Add(this.lbl_tot9);
+            this.panel1.Controls.Add(this.lbl_unit9);
+            this.panel1.Controls.Add(this.lbl_qty9);
+            this.panel1.Controls.Add(this.lbl_item9);
+            this.panel1.Controls.Add(this.lbl_tot8);
+            this.panel1.Controls.Add(this.lbl_unit8);
+            this.panel1.Controls.Add(this.lbl_qty8);
+            this.panel1.Controls.Add(this.lbl_item8);
+            this.panel1.Controls.Add(this.lbl_tot7);
+            this.panel1.Controls.Add(this.lbl_unit7);
+            this.panel1.Controls.Add(this.lbl_qty7);
+            this.panel1.Controls.Add(this.lbl_item7);
+            this.panel1.Controls.Add(this.lbl_tot6);
+            this.panel1.Controls.Add(this.lbl_tot5);
+            this.panel1.Controls.Add(this.lbl_unit6);
+            this.panel1.Controls.Add(this.lbl_unit5);
+            this.panel1.Controls.Add(this.lbl_qty6);
+            this.panel1.Controls.Add(this.lbl_tot4);
+            this.panel1.Controls.Add(this.lbl_qty5);
+            this.panel1.Controls.Add(this.lbl_unit4);
+            this.panel1.Controls.Add(this.lbl_item6);
+            this.panel1.Controls.Add(this.lbl_qty4);
+            this.panel1.Controls.Add(this.lbl_item5);
+            this.panel1.Controls.Add(this.lbl_item4);
             this.panel1.Controls.Add(this.lbl_tot3);
             this.panel1.Controls.Add(this.lbl_tot2);
             this.panel1.Controls.Add(this.lbl_tot1);
@@ -433,10 +509,272 @@ namespace Inventory_v01
             this.panel1.Controls.Add(this.lbl_item2);
             this.panel1.Controls.Add(this.lbl_qty1);
             this.panel1.Controls.Add(this.lbl_item1);
-            this.panel1.Location = new System.Drawing.Point(1541, 79);
+            this.panel1.Location = new System.Drawing.Point(638, 82);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 504);
+            this.panel1.Size = new System.Drawing.Size(439, 504);
             this.panel1.TabIndex = 9;
+            // 
+            // btn_remove1
+            // 
+            this.btn_remove1.Location = new System.Drawing.Point(352, 57);
+            this.btn_remove1.Name = "btn_remove1";
+            this.btn_remove1.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove1.TabIndex = 2;
+            this.btn_remove1.Text = "-";
+            this.btn_remove1.UseVisualStyleBackColor = true;
+            this.btn_remove1.Click += new System.EventHandler(this.btn_remove1_Click);
+            // 
+            // lbl_tot10
+            // 
+            this.lbl_tot10.AutoSize = true;
+            this.lbl_tot10.Location = new System.Drawing.Point(276, 417);
+            this.lbl_tot10.Name = "lbl_tot10";
+            this.lbl_tot10.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot10.TabIndex = 1;
+            this.lbl_tot10.Text = "label6";
+            // 
+            // lbl_unit10
+            // 
+            this.lbl_unit10.AutoSize = true;
+            this.lbl_unit10.Location = new System.Drawing.Point(208, 417);
+            this.lbl_unit10.Name = "lbl_unit10";
+            this.lbl_unit10.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit10.TabIndex = 1;
+            this.lbl_unit10.Text = "label6";
+            // 
+            // lbl_qty10
+            // 
+            this.lbl_qty10.AutoSize = true;
+            this.lbl_qty10.Location = new System.Drawing.Point(138, 417);
+            this.lbl_qty10.Name = "lbl_qty10";
+            this.lbl_qty10.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty10.TabIndex = 1;
+            this.lbl_qty10.Text = "label6";
+            // 
+            // lbl_item10
+            // 
+            this.lbl_item10.AutoSize = true;
+            this.lbl_item10.Location = new System.Drawing.Point(65, 417);
+            this.lbl_item10.Name = "lbl_item10";
+            this.lbl_item10.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item10.TabIndex = 1;
+            this.lbl_item10.Text = "label6";
+            // 
+            // lbl_tot9
+            // 
+            this.lbl_tot9.AutoSize = true;
+            this.lbl_tot9.Location = new System.Drawing.Point(276, 376);
+            this.lbl_tot9.Name = "lbl_tot9";
+            this.lbl_tot9.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot9.TabIndex = 1;
+            this.lbl_tot9.Text = "label6";
+            // 
+            // lbl_unit9
+            // 
+            this.lbl_unit9.AutoSize = true;
+            this.lbl_unit9.Location = new System.Drawing.Point(208, 376);
+            this.lbl_unit9.Name = "lbl_unit9";
+            this.lbl_unit9.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit9.TabIndex = 1;
+            this.lbl_unit9.Text = "label6";
+            // 
+            // lbl_qty9
+            // 
+            this.lbl_qty9.AutoSize = true;
+            this.lbl_qty9.Location = new System.Drawing.Point(138, 376);
+            this.lbl_qty9.Name = "lbl_qty9";
+            this.lbl_qty9.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty9.TabIndex = 1;
+            this.lbl_qty9.Text = "label6";
+            // 
+            // lbl_item9
+            // 
+            this.lbl_item9.AutoSize = true;
+            this.lbl_item9.Location = new System.Drawing.Point(65, 376);
+            this.lbl_item9.Name = "lbl_item9";
+            this.lbl_item9.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item9.TabIndex = 1;
+            this.lbl_item9.Text = "label6";
+            // 
+            // lbl_tot8
+            // 
+            this.lbl_tot8.AutoSize = true;
+            this.lbl_tot8.Location = new System.Drawing.Point(276, 328);
+            this.lbl_tot8.Name = "lbl_tot8";
+            this.lbl_tot8.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot8.TabIndex = 1;
+            this.lbl_tot8.Text = "label6";
+            // 
+            // lbl_unit8
+            // 
+            this.lbl_unit8.AutoSize = true;
+            this.lbl_unit8.Location = new System.Drawing.Point(208, 328);
+            this.lbl_unit8.Name = "lbl_unit8";
+            this.lbl_unit8.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit8.TabIndex = 1;
+            this.lbl_unit8.Text = "label6";
+            // 
+            // lbl_qty8
+            // 
+            this.lbl_qty8.AutoSize = true;
+            this.lbl_qty8.Location = new System.Drawing.Point(138, 328);
+            this.lbl_qty8.Name = "lbl_qty8";
+            this.lbl_qty8.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty8.TabIndex = 1;
+            this.lbl_qty8.Text = "label6";
+            // 
+            // lbl_item8
+            // 
+            this.lbl_item8.AutoSize = true;
+            this.lbl_item8.Location = new System.Drawing.Point(65, 328);
+            this.lbl_item8.Name = "lbl_item8";
+            this.lbl_item8.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item8.TabIndex = 1;
+            this.lbl_item8.Text = "label6";
+            // 
+            // lbl_tot7
+            // 
+            this.lbl_tot7.AutoSize = true;
+            this.lbl_tot7.Location = new System.Drawing.Point(276, 286);
+            this.lbl_tot7.Name = "lbl_tot7";
+            this.lbl_tot7.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot7.TabIndex = 1;
+            this.lbl_tot7.Text = "label6";
+            // 
+            // lbl_unit7
+            // 
+            this.lbl_unit7.AutoSize = true;
+            this.lbl_unit7.Location = new System.Drawing.Point(208, 286);
+            this.lbl_unit7.Name = "lbl_unit7";
+            this.lbl_unit7.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit7.TabIndex = 1;
+            this.lbl_unit7.Text = "label6";
+            // 
+            // lbl_qty7
+            // 
+            this.lbl_qty7.AutoSize = true;
+            this.lbl_qty7.Location = new System.Drawing.Point(138, 286);
+            this.lbl_qty7.Name = "lbl_qty7";
+            this.lbl_qty7.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty7.TabIndex = 1;
+            this.lbl_qty7.Text = "label6";
+            // 
+            // lbl_item7
+            // 
+            this.lbl_item7.AutoSize = true;
+            this.lbl_item7.Location = new System.Drawing.Point(65, 286);
+            this.lbl_item7.Name = "lbl_item7";
+            this.lbl_item7.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item7.TabIndex = 1;
+            this.lbl_item7.Text = "label6";
+            // 
+            // lbl_tot6
+            // 
+            this.lbl_tot6.AutoSize = true;
+            this.lbl_tot6.Location = new System.Drawing.Point(276, 249);
+            this.lbl_tot6.Name = "lbl_tot6";
+            this.lbl_tot6.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot6.TabIndex = 1;
+            this.lbl_tot6.Text = "label6";
+            // 
+            // lbl_tot5
+            // 
+            this.lbl_tot5.AutoSize = true;
+            this.lbl_tot5.Location = new System.Drawing.Point(276, 205);
+            this.lbl_tot5.Name = "lbl_tot5";
+            this.lbl_tot5.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot5.TabIndex = 1;
+            this.lbl_tot5.Text = "label6";
+            // 
+            // lbl_unit6
+            // 
+            this.lbl_unit6.AutoSize = true;
+            this.lbl_unit6.Location = new System.Drawing.Point(208, 249);
+            this.lbl_unit6.Name = "lbl_unit6";
+            this.lbl_unit6.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit6.TabIndex = 1;
+            this.lbl_unit6.Text = "label6";
+            // 
+            // lbl_unit5
+            // 
+            this.lbl_unit5.AutoSize = true;
+            this.lbl_unit5.Location = new System.Drawing.Point(208, 205);
+            this.lbl_unit5.Name = "lbl_unit5";
+            this.lbl_unit5.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit5.TabIndex = 1;
+            this.lbl_unit5.Text = "label6";
+            // 
+            // lbl_qty6
+            // 
+            this.lbl_qty6.AutoSize = true;
+            this.lbl_qty6.Location = new System.Drawing.Point(138, 249);
+            this.lbl_qty6.Name = "lbl_qty6";
+            this.lbl_qty6.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty6.TabIndex = 1;
+            this.lbl_qty6.Text = "label6";
+            // 
+            // lbl_tot4
+            // 
+            this.lbl_tot4.AutoSize = true;
+            this.lbl_tot4.Location = new System.Drawing.Point(276, 169);
+            this.lbl_tot4.Name = "lbl_tot4";
+            this.lbl_tot4.Size = new System.Drawing.Size(35, 13);
+            this.lbl_tot4.TabIndex = 1;
+            this.lbl_tot4.Text = "label6";
+            // 
+            // lbl_qty5
+            // 
+            this.lbl_qty5.AutoSize = true;
+            this.lbl_qty5.Location = new System.Drawing.Point(138, 205);
+            this.lbl_qty5.Name = "lbl_qty5";
+            this.lbl_qty5.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty5.TabIndex = 1;
+            this.lbl_qty5.Text = "label6";
+            // 
+            // lbl_unit4
+            // 
+            this.lbl_unit4.AutoSize = true;
+            this.lbl_unit4.Location = new System.Drawing.Point(208, 169);
+            this.lbl_unit4.Name = "lbl_unit4";
+            this.lbl_unit4.Size = new System.Drawing.Size(35, 13);
+            this.lbl_unit4.TabIndex = 1;
+            this.lbl_unit4.Text = "label6";
+            // 
+            // lbl_item6
+            // 
+            this.lbl_item6.AutoSize = true;
+            this.lbl_item6.Location = new System.Drawing.Point(65, 249);
+            this.lbl_item6.Name = "lbl_item6";
+            this.lbl_item6.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item6.TabIndex = 1;
+            this.lbl_item6.Text = "label6";
+            // 
+            // lbl_qty4
+            // 
+            this.lbl_qty4.AutoSize = true;
+            this.lbl_qty4.Location = new System.Drawing.Point(138, 169);
+            this.lbl_qty4.Name = "lbl_qty4";
+            this.lbl_qty4.Size = new System.Drawing.Size(35, 13);
+            this.lbl_qty4.TabIndex = 1;
+            this.lbl_qty4.Text = "label6";
+            // 
+            // lbl_item5
+            // 
+            this.lbl_item5.AutoSize = true;
+            this.lbl_item5.Location = new System.Drawing.Point(65, 205);
+            this.lbl_item5.Name = "lbl_item5";
+            this.lbl_item5.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item5.TabIndex = 1;
+            this.lbl_item5.Text = "label6";
+            // 
+            // lbl_item4
+            // 
+            this.lbl_item4.AutoSize = true;
+            this.lbl_item4.Location = new System.Drawing.Point(65, 169);
+            this.lbl_item4.Name = "lbl_item4";
+            this.lbl_item4.Size = new System.Drawing.Size(35, 13);
+            this.lbl_item4.TabIndex = 1;
+            this.lbl_item4.Text = "label6";
             // 
             // lbl_tot3
             // 
@@ -537,7 +875,7 @@ namespace Inventory_v01
             // lbl_qty1
             // 
             this.lbl_qty1.AutoSize = true;
-            this.lbl_qty1.Location = new System.Drawing.Point(138, 58);
+            this.lbl_qty1.Location = new System.Drawing.Point(138, 62);
             this.lbl_qty1.Name = "lbl_qty1";
             this.lbl_qty1.Size = new System.Drawing.Size(35, 13);
             this.lbl_qty1.TabIndex = 0;
@@ -556,11 +894,92 @@ namespace Inventory_v01
             // 
             this.dgv_item.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgv_item.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_item.Location = new System.Drawing.Point(644, 82);
+            this.dgv_item.Location = new System.Drawing.Point(1165, 82);
             this.dgv_item.Name = "dgv_item";
             this.dgv_item.Size = new System.Drawing.Size(636, 409);
             this.dgv_item.TabIndex = 10;
             this.dgv_item.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_item_CellClick);
+            // 
+            // btn_remove2
+            // 
+            this.btn_remove2.Location = new System.Drawing.Point(352, 91);
+            this.btn_remove2.Name = "btn_remove2";
+            this.btn_remove2.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove2.TabIndex = 3;
+            this.btn_remove2.Text = "-";
+            this.btn_remove2.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove3
+            // 
+            this.btn_remove3.Location = new System.Drawing.Point(352, 125);
+            this.btn_remove3.Name = "btn_remove3";
+            this.btn_remove3.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove3.TabIndex = 4;
+            this.btn_remove3.Text = "-";
+            this.btn_remove3.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove4
+            // 
+            this.btn_remove4.Location = new System.Drawing.Point(352, 162);
+            this.btn_remove4.Name = "btn_remove4";
+            this.btn_remove4.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove4.TabIndex = 4;
+            this.btn_remove4.Text = "-";
+            this.btn_remove4.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove5
+            // 
+            this.btn_remove5.Location = new System.Drawing.Point(352, 195);
+            this.btn_remove5.Name = "btn_remove5";
+            this.btn_remove5.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove5.TabIndex = 4;
+            this.btn_remove5.Text = "-";
+            this.btn_remove5.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove6
+            // 
+            this.btn_remove6.Location = new System.Drawing.Point(352, 244);
+            this.btn_remove6.Name = "btn_remove6";
+            this.btn_remove6.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove6.TabIndex = 4;
+            this.btn_remove6.Text = "-";
+            this.btn_remove6.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove7
+            // 
+            this.btn_remove7.Location = new System.Drawing.Point(352, 280);
+            this.btn_remove7.Name = "btn_remove7";
+            this.btn_remove7.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove7.TabIndex = 4;
+            this.btn_remove7.Text = "-";
+            this.btn_remove7.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove8
+            // 
+            this.btn_remove8.Location = new System.Drawing.Point(352, 318);
+            this.btn_remove8.Name = "btn_remove8";
+            this.btn_remove8.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove8.TabIndex = 4;
+            this.btn_remove8.Text = "-";
+            this.btn_remove8.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove9
+            // 
+            this.btn_remove9.Location = new System.Drawing.Point(352, 366);
+            this.btn_remove9.Name = "btn_remove9";
+            this.btn_remove9.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove9.TabIndex = 4;
+            this.btn_remove9.Text = "-";
+            this.btn_remove9.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove10
+            // 
+            this.btn_remove10.Location = new System.Drawing.Point(352, 407);
+            this.btn_remove10.Name = "btn_remove10";
+            this.btn_remove10.Size = new System.Drawing.Size(27, 23);
+            this.btn_remove10.TabIndex = 4;
+            this.btn_remove10.Text = "-";
+            this.btn_remove10.UseVisualStyleBackColor = true;
             // 
             // frm_sale
             // 
@@ -642,5 +1061,43 @@ namespace Inventory_v01
         private System.Windows.Forms.Label lbl_item1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_tot10;
+        private System.Windows.Forms.Label lbl_unit10;
+        private System.Windows.Forms.Label lbl_qty10;
+        private System.Windows.Forms.Label lbl_item10;
+        private System.Windows.Forms.Label lbl_tot9;
+        private System.Windows.Forms.Label lbl_unit9;
+        private System.Windows.Forms.Label lbl_qty9;
+        private System.Windows.Forms.Label lbl_item9;
+        private System.Windows.Forms.Label lbl_tot8;
+        private System.Windows.Forms.Label lbl_unit8;
+        private System.Windows.Forms.Label lbl_qty8;
+        private System.Windows.Forms.Label lbl_item8;
+        private System.Windows.Forms.Label lbl_tot7;
+        private System.Windows.Forms.Label lbl_unit7;
+        private System.Windows.Forms.Label lbl_qty7;
+        private System.Windows.Forms.Label lbl_item7;
+        private System.Windows.Forms.Label lbl_tot6;
+        private System.Windows.Forms.Label lbl_tot5;
+        private System.Windows.Forms.Label lbl_unit6;
+        private System.Windows.Forms.Label lbl_unit5;
+        private System.Windows.Forms.Label lbl_qty6;
+        private System.Windows.Forms.Label lbl_tot4;
+        private System.Windows.Forms.Label lbl_qty5;
+        private System.Windows.Forms.Label lbl_unit4;
+        private System.Windows.Forms.Label lbl_item6;
+        private System.Windows.Forms.Label lbl_qty4;
+        private System.Windows.Forms.Label lbl_item5;
+        private System.Windows.Forms.Label lbl_item4;
+        private System.Windows.Forms.Button btn_remove1;
+        private System.Windows.Forms.Button btn_remove10;
+        private System.Windows.Forms.Button btn_remove9;
+        private System.Windows.Forms.Button btn_remove8;
+        private System.Windows.Forms.Button btn_remove7;
+        private System.Windows.Forms.Button btn_remove6;
+        private System.Windows.Forms.Button btn_remove5;
+        private System.Windows.Forms.Button btn_remove4;
+        private System.Windows.Forms.Button btn_remove3;
+        private System.Windows.Forms.Button btn_remove2;
     }
 }

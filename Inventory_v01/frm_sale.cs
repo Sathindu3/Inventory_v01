@@ -17,36 +17,15 @@ using System.Windows.Forms;
 
 namespace Inventory_v01
 {
-
     public partial class frm_sale : Form
-
-
-
-
     {
-        private LinkedList<string> linkedList;
-      //  public partial class Form1 : Form
-     
-                  
 
-         
-    
-           private void addButton_Click(object sender, EventArgs e)
-        {
-           
-        }
-        private void UpdateListBox()
-        {
-            //listBox.Items.Clear();
-            //foreach (var item in linkedList)
-            //{
-            //    listBox.Items.Add(item);
-            //}
-        }
+
+
+
         public frm_sale()
         {
             InitializeComponent();
-            linkedList = new LinkedList<string>();
         }
         public void fndataLoad()
         {
@@ -59,9 +38,7 @@ namespace Inventory_v01
 
         private void addSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frm_sale sale = new frm_sale();
-            //this.Hide();
-            //sale.Show();
+           
         }
 
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,11 +54,25 @@ namespace Inventory_v01
            // this.Hide();
             config.Show();
         }
+        private void load_items()
+        {
+
+            MySqlDataAdapter da1 = new MySqlDataAdapter("select * from item", cls_connection.con);
+
+            DataTable dt1 = new DataTable();
+
+            da1.Fill(dt1);
+
+            for (int x = 0; x < dt1.Rows.Count; x++)
+            {
+                cmb_itemName.Items.Add(dt1.Rows[x]["item_name"]);
+            }
+        }
 
         private void frm_sale_Load(object sender, EventArgs e)
         {
             fndataLoad();
-
+            load_items();
 
             //dgv_item.Columns[0].Name = "item_code";
             //dgv_item.Columns[1].Name = "item_name";
@@ -91,66 +82,14 @@ namespace Inventory_v01
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            //string item = cmb_itemName.Text;
-            //linkedList.AddLast(item);
-            //UpdateListBox();
-            //label3.Text = item;
+          
+           
 
-            //inputTextBox.Clear();
 
-            string item = cmb_itemName.Text;
-            linkedList.AddLast(item);
-            UpdateLabels();
 
-            string qty = txt_quantity.Text;
-            linkedList2.AddLast(qty);
-            Update_qty_Labels();
 
-        }
-        private void UpdateLabels()
-        {
-            int labelIndex_item = 1;
-            foreach (var item in linkedList)
-            {
-                Label name = Controls.Find("lbl_item" + labelIndex_item, true)[0] as Label;
-                name.Text = item;
-                labelIndex_item++;
 
-              
-            }
-            //for (int i = labelIndex; i <= 3; i++)
-            //{
-            //    Label label = Controls.Find("label" + i, true)[0] as Label;
-            //    label.Text = string.Empty;
-            //}
-        }
-        private void Update_qty_Labels()
-        {
-            int labelIndex_qty = 1;
-            foreach (var qty in linkedList2)
-            {
-               
-
-                Label qty1 = Controls.Find("lbl_qty" + labelIndex_qty, true)[0] as Label;
-                qty1.Text = qty;
-                labelIndex_qty++;
-            }
-            //for (int i = labelIndex; i <= 3; i++)
-            //{
-            //    Label label = Controls.Find("label" + i, true)[0] as Label;
-            //    label.Text = string.Empty;
-            //}
-        }
-        private void removeButton_Click(object sender, EventArgs e)
-        {
-            if (linkedList.Count > 0)
-            {
-                linkedList.RemoveLast();
-                UpdateLabels();
-            }
-        }
-
-      
+        } 
 
         private void dgv_item_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -209,41 +148,10 @@ namespace Inventory_v01
             purchasing.Show();
         }
 
-
-        //        using System;
-        //using System.Collections.Generic;
-
-        //public class Item
-        //    {
-        //        public string Name { get; set; }
-        //        public double Price { get; set; }
-        //        public int Quantity { get; set; }
-
-        //        public Item(string name, double price, int quantity)
-        //        {
-        //            Name = name;
-        //            Price = price;
-        //            Quantity = quantity;
-        //        }
-        //    }
-
-        //    public class Program
-        //    {
-        //        public static void Main(string[] args)
-        //        {
-        //            LinkedList<Item> items = new LinkedList<Item>();
-
-        //            // Create a new item
-        //            Item newItem = new Item("Item 1", 10.99, 2);
-
-        //            // Add the item to the linked list
-        //            items.AddLast(newItem);
-
-        //            Console.WriteLine("Item added to the linked list.");
-
-        //            Console.ReadKey();
-        //        }
-        //    }
+        private void btn_remove1_Click(object sender, EventArgs e)
+        {
+           
+        }      
 
     }
     
