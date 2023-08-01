@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cls_connection.cs" />
-    <Compile Include="cls_listnode.cs" />
     <Compile Include="frm_configuration.cs">
       <SubType>Form</SubType>
     </Compile>

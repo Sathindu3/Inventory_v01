@@ -12,8 +12,6 @@ using System.Windows.Forms;
 
 
 
-//using System;
-//using System.Collections.Generic;
 
 namespace Inventory_v01
 {
@@ -21,11 +19,14 @@ namespace Inventory_v01
     {
 
 
-
+        DataTable table = new DataTable("table");
+        int index;
 
         public frm_sale()
         {
             InitializeComponent();
+         
+
         }
         public void fndataLoad()
         {
@@ -72,24 +73,26 @@ namespace Inventory_v01
         private void frm_sale_Load(object sender, EventArgs e)
         {
             fndataLoad();
-            load_items();
 
-            //dgv_item.Columns[0].Name = "item_code";
-            //dgv_item.Columns[1].Name = "item_name";
-            //dgv_item.Columns[2].Name = "category";
-            //dgv_item.Columns[0].Name = "selling_price";
+            table.Columns.Add("Item name", Type.GetType("System.String"));
+            table.Columns.Add("Unit Price", Type.GetType("System.String"));
+            table.Columns.Add("Quantity ", Type.GetType("System.String"));
+            table.Columns.Add("Total ", Type.GetType("System.String"));
+            dgv_billpreview.DataSource = table;
+
+
+
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-          
+            table.Rows.Add(cmb_itemName.Text, txt_sellingPrice.Text, txt_quantity.Text,lbl_total.Text);
+
            
 
 
-
-
-
-        } 
+        }
+       
 
         private void dgv_item_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -124,8 +127,7 @@ namespace Inventory_v01
 
         private void manageItemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_manageItem manageItem = new frm_manageItem();
-           // this.Hide();
+            frm_manageItem manageItem = new frm_manageItem();     
             manageItem.Show();
 
         }
@@ -151,8 +153,64 @@ namespace Inventory_v01
         private void btn_remove1_Click(object sender, EventArgs e)
         {
            
-        }      
+        }
 
+        private void dgv_billpreview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_billpreview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //index = e.RowIndex;
+            //DataGridViewRow row = dgv_billpreview.Rows[index];
+            //txt_quantity.Text = row.Cells[0].Value.ToString();
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow newdata = dgv_billpreview.Rows[index];
+            newdata.Cells[0].Value = cmb_itemName.Text;
+            newdata.Cells[1].Value = txt_sellingPrice.Text;
+            newdata.Cells[2].Value = txt_quantity.Text;
+            newdata.Cells[3].Value = lbl_total.Text;
+            //newdata.Cells[3].Value = cmb_itemName.Text;
+        }
+
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+            index = dgv_billpreview.CurrentCell.RowIndex;
+            dgv_billpreview.Rows.RemoveAt(index);
+        }
+
+        private void txt_sellingPrice_TextChanged(object sender, EventArgs e)
+        {
+          
+           
+        }
+
+        private void txt_quantity_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_quantity.Text == "")
+            {
+                MessageBox.Show("Please enter a quantity");
+
+            }
+            else
+            {
+                lbl_total.Text = (Convert.ToInt32(txt_quantity.Text) * Convert.ToInt32(txt_sellingPrice.Text)).ToString();
+            }
+        }
+
+        private void btn_calSum_Click(object sender, EventArgs e)
+        {
+            lbl_Amount.Text = "0";
+            for(int i = 0; i < dgv_billpreview.Rows.Count;  i++)
+            {
+                lbl_Amount.Text = Convert.ToString(double.Parse(lbl_Amount.Text) + double.Parse(dgv_billpreview.Rows[i].Cells[3].Value.ToString()));
+            }
+        }
     }
     
 }
