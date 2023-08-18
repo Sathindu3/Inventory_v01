@@ -83,12 +83,42 @@ namespace Inventory_v01
 
 
         }
+        public void stock_balance()
+        {
+            cls_connection.open_connection();
+            string sqlqry4 = "update  stock set  quantity =quantity -  " + txt_quantity.Text + " where item_name = '" + cmb_itemName.Text + "'";
+
+            MySqlCommand cmd4 = new MySqlCommand(sqlqry4, cls_connection.con);
+
+            cmd4.ExecuteNonQuery();
+            cls_connection.close_connection();
+        }
+        private void clear()
+        {
+            cmb_itemName.Text = "";
+            txt_quantity.Text = "";
+            txt_itemCode.Text = "";
+            txt_sellingPrice.Text = "";
+        }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
             table.Rows.Add(cmb_itemName.Text, txt_sellingPrice.Text, txt_quantity.Text,lbl_total.Text);
 
+            if (txt_quantity.Text == "")
+            {
+                MessageBox.Show("Please enter a quantity");
+
+            }
+            else
+            {
+                stock_balance();
+                clear();
+            }
+
            
+
+
 
 
         }
@@ -103,6 +133,27 @@ namespace Inventory_v01
                 cmb_itemName.Text = dgvrow.Cells[1].Value.ToString();
                 txt_sellingPrice.Text = dgvrow.Cells[5].Value.ToString();
             }
+            cls_connection.open_connection();
+            MySqlCommand cmd1 = new MySqlCommand("select quantity from stock where item_name =@id", cls_connection.con);
+            cmd1.Parameters.AddWithValue("id", cmb_itemName.Text);
+
+            MySqlDataReader reader1;
+            reader1 = cmd1.ExecuteReader();
+
+            if (reader1.Read())
+            {
+
+
+                lbl_availableStock.Text = reader1["quantity"].ToString();
+
+
+
+            }
+            //else
+            //{
+            //    MessageBox.Show("No data found");
+            //}
+            cls_connection.close_connection();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -177,11 +228,27 @@ namespace Inventory_v01
             newdata.Cells[3].Value = lbl_total.Text;
             //newdata.Cells[3].Value = cmb_itemName.Text;
         }
+        public void remove_Item()
+        {
+
+            cls_connection.open_connection();
+            string sqlqry4 = "update  stock set quantity =quantity +  " + txt_quantity.Text + " where item_name = '" + cmb_itemName.Text + "'";
+
+
+            MySqlCommand cmd4 = new MySqlCommand(sqlqry4, cls_connection.con);
+
+            cmd4.ExecuteNonQuery();
+            cls_connection.close_connection();
+            fndataLoad();
+            remove_Item();
+        }
 
         private void btn_remove_Click(object sender, EventArgs e)
         {
             index = dgv_billpreview.CurrentCell.RowIndex;
             dgv_billpreview.Rows.RemoveAt(index);
+
+
         }
 
         private void txt_sellingPrice_TextChanged(object sender, EventArgs e)
@@ -192,15 +259,39 @@ namespace Inventory_v01
 
         private void txt_quantity_TextChanged(object sender, EventArgs e)
         {
-            if (txt_quantity.Text == "")
-            {
-                MessageBox.Show("Please enter a quantity");
-
-            }
-            else
+            if(txt_quantity.Text != "")
             {
                 lbl_total.Text = (Convert.ToInt32(txt_quantity.Text) * Convert.ToInt32(txt_sellingPrice.Text)).ToString();
+
+
+
+
+
+
+                cls_connection.open_connection();
+                MySqlCommand cmd1 = new MySqlCommand("select quantity from stock where item_name =@id", cls_connection.con);
+                cmd1.Parameters.AddWithValue("id", cmb_itemName.Text);
+
+                MySqlDataReader reader1;
+                reader1 = cmd1.ExecuteReader();
+
+                if (reader1.Read())
+                {
+
+
+                    lbl_availableStock.Text = reader1["quantity"].ToString();
+
+
+
+                }
+                //else
+                //{
+                //    MessageBox.Show("No data found");
+                //}
+                cls_connection.close_connection();
             }
+
+
         }
 
         private void btn_calSum_Click(object sender, EventArgs e)
@@ -210,6 +301,67 @@ namespace Inventory_v01
             {
                 lbl_Amount.Text = Convert.ToString(double.Parse(lbl_Amount.Text) + double.Parse(dgv_billpreview.Rows[i].Cells[3].Value.ToString()));
             }
+        }
+
+        private void btn_process_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_billpreview.Rows)
+            {
+                using (MySqlCommand cmd = new MySqlCommand("insert into")) ;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmb_category.Text == "bun")
+            {
+
+                MySqlDataAdapter da = new MySqlDataAdapter("Select * from item where category ='bun'", cls_connection.con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "item");
+                dgv_item.DataSource = ds.Tables["item"].DefaultView;
+
+                dgv_item.Columns[0].Name = "item_code";
+                dgv_item.Columns[1].Name = "item_name";
+                dgv_item.Columns[2].Name = "category";
+                dgv_item.Columns[3].Name = "supplier";
+                dgv_item.Columns[4].Name = "unit_price";
+                dgv_item.Columns[5].Name = "selling_price";
+                cls_connection.close_connection();
+            }
+            else
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("Select * from item ", cls_connection.con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "item");
+                dgv_item.DataSource = ds.Tables["item"].DefaultView;
+
+                dgv_item.Columns[0].Name = "item_code";
+                dgv_item.Columns[1].Name = "item_name";
+                dgv_item.Columns[2].Name = "category";
+                dgv_item.Columns[3].Name = "supplier";
+                dgv_item.Columns[4].Name = "unit_price";
+                dgv_item.Columns[5].Name = "selling_price";
+                cls_connection.close_connection();
+            }
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            fndataLoad();
+
+
+
+        }
+
+        private void cmb_itemName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void dgv_item_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

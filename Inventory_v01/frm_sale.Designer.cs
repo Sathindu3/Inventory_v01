@@ -56,13 +56,18 @@ namespace Inventory_v01
             this.aboutSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_remove = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             this.cmb_itemName = new System.Windows.Forms.ComboBox();
             this.txt_quantity = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_availableStock = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label134 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,18 +76,15 @@ namespace Inventory_v01
             this.dgv_item = new System.Windows.Forms.DataGridView();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_billpreview = new System.Windows.Forms.DataGridView();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.btn_remove = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_total = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_category = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lbl_Amount = new System.Windows.Forms.Label();
+            this.dgv_billpreview = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_process = new System.Windows.Forms.Button();
             this.btn_calSum = new System.Windows.Forms.Button();
+            this.lbl_Amount = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_item)).BeginInit();
@@ -296,7 +298,7 @@ namespace Inventory_v01
             this.groupBox1.Controls.Add(this.txt_quantity);
             this.groupBox1.Controls.Add(this.btn_add);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lbl_availableStock);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lbl_total);
             this.groupBox1.Controls.Add(this.label6);
@@ -315,6 +317,28 @@ namespace Inventory_v01
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item Details";
             // 
+            // btn_remove
+            // 
+            this.btn_remove.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_remove.Location = new System.Drawing.Point(444, 129);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(115, 33);
+            this.btn_remove.TabIndex = 12;
+            this.btn_remove.Text = "Remove item";
+            this.btn_remove.UseVisualStyleBackColor = false;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
+            // 
+            // btn_update
+            // 
+            this.btn_update.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_update.Location = new System.Drawing.Point(442, 88);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(117, 35);
+            this.btn_update.TabIndex = 11;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
             // cmb_itemName
             // 
             this.cmb_itemName.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
@@ -323,24 +347,26 @@ namespace Inventory_v01
             this.cmb_itemName.Name = "cmb_itemName";
             this.cmb_itemName.Size = new System.Drawing.Size(203, 29);
             this.cmb_itemName.TabIndex = 10;
+            this.cmb_itemName.SelectedIndexChanged += new System.EventHandler(this.cmb_itemName_SelectedIndexChanged);
             // 
             // txt_quantity
             // 
             this.txt_quantity.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.txt_quantity.Location = new System.Drawing.Point(158, 151);
+            this.txt_quantity.Location = new System.Drawing.Point(188, 151);
             this.txt_quantity.Name = "txt_quantity";
-            this.txt_quantity.Size = new System.Drawing.Size(100, 28);
+            this.txt_quantity.Size = new System.Drawing.Size(70, 28);
             this.txt_quantity.TabIndex = 9;
             this.txt_quantity.TextChanged += new System.EventHandler(this.txt_quantity_TextChanged);
             // 
             // btn_add
             // 
+            this.btn_add.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btn_add.Location = new System.Drawing.Point(442, 47);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(97, 35);
+            this.btn_add.Size = new System.Drawing.Size(117, 35);
             this.btn_add.TabIndex = 8;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Text = "Add item";
+            this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label2
@@ -353,15 +379,15 @@ namespace Inventory_v01
             this.label2.TabIndex = 3;
             this.label2.Text = "Quantity";
             // 
-            // label4
+            // lbl_availableStock
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(133, 295);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Selling Price";
+            this.lbl_availableStock.AutoSize = true;
+            this.lbl_availableStock.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_availableStock.Location = new System.Drawing.Point(133, 295);
+            this.lbl_availableStock.Name = "lbl_availableStock";
+            this.lbl_availableStock.Size = new System.Drawing.Size(95, 21);
+            this.lbl_availableStock.TabIndex = 3;
+            this.lbl_availableStock.Text = "Selling Price";
             // 
             // label3
             // 
@@ -373,6 +399,26 @@ namespace Inventory_v01
             this.label3.TabIndex = 3;
             this.label3.Text = "Available stock";
             // 
+            // lbl_total
+            // 
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.Location = new System.Drawing.Point(207, 198);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(49, 21);
+            this.lbl_total.TabIndex = 3;
+            this.lbl_total.Text = "00.00";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 21);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Total";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -382,6 +428,16 @@ namespace Inventory_v01
             this.label5.Size = new System.Drawing.Size(95, 21);
             this.label5.TabIndex = 3;
             this.label5.Text = "Selling Price";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(152, 198);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 21);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Rs.";
             // 
             // label7
             // 
@@ -440,11 +496,12 @@ namespace Inventory_v01
             this.dgv_item.Size = new System.Drawing.Size(932, 883);
             this.dgv_item.TabIndex = 10;
             this.dgv_item.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_item_CellClick);
+            this.dgv_item.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_item_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmb_category);
             this.panel2.Controls.Add(this.dgv_item);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(22, 50);
@@ -452,77 +509,17 @@ namespace Inventory_v01
             this.panel2.Size = new System.Drawing.Size(1001, 979);
             this.panel2.TabIndex = 11;
             // 
-            // dgv_billpreview
+            // cmb_category
             // 
-            this.dgv_billpreview.AllowUserToAddRows = false;
-            this.dgv_billpreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_billpreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_billpreview.Location = new System.Drawing.Point(23, 67);
-            this.dgv_billpreview.Name = "dgv_billpreview";
-            this.dgv_billpreview.Size = new System.Drawing.Size(584, 512);
-            this.dgv_billpreview.TabIndex = 0;
-            this.dgv_billpreview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_billpreview_CellClick);
-            this.dgv_billpreview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_billpreview_CellContentClick);
-            // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(442, 88);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(97, 35);
-            this.btn_update.TabIndex = 11;
-            this.btn_update.Text = "Update";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // btn_remove
-            // 
-            this.btn_remove.Location = new System.Drawing.Point(444, 129);
-            this.btn_remove.Name = "btn_remove";
-            this.btn_remove.Size = new System.Drawing.Size(95, 33);
-            this.btn_remove.TabIndex = 12;
-            this.btn_remove.Text = "Remove";
-            this.btn_remove.UseVisualStyleBackColor = true;
-            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.btn_calSum);
-            this.panel1.Controls.Add(this.lbl_Amount);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.dgv_billpreview);
-            this.panel1.Location = new System.Drawing.Point(1052, 437);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(624, 592);
-            this.panel1.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 198);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 21);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Total";
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.AutoSize = true;
-            this.lbl_total.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(207, 198);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(49, 21);
-            this.lbl_total.TabIndex = 3;
-            this.lbl_total.Text = "00.00";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(185, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 21);
-            this.comboBox1.TabIndex = 11;
+            this.cmb_category.FormattingEnabled = true;
+            this.cmb_category.Items.AddRange(new object[] {
+            "bun",
+            "rice"});
+            this.cmb_category.Location = new System.Drawing.Point(185, 51);
+            this.cmb_category.Name = "cmb_category";
+            this.cmb_category.Size = new System.Drawing.Size(148, 21);
+            this.cmb_category.TabIndex = 11;
+            this.cmb_category.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -534,43 +531,78 @@ namespace Inventory_v01
             this.label8.TabIndex = 3;
             this.label8.Text = "Filter Category";
             // 
-            // label9
+            // dgv_billpreview
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(152, 198);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 21);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Rs.";
+            this.dgv_billpreview.AllowUserToAddRows = false;
+            this.dgv_billpreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_billpreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_billpreview.Location = new System.Drawing.Point(17, 14);
+            this.dgv_billpreview.Name = "dgv_billpreview";
+            this.dgv_billpreview.Size = new System.Drawing.Size(584, 462);
+            this.dgv_billpreview.TabIndex = 0;
+            this.dgv_billpreview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_billpreview_CellClick);
+            this.dgv_billpreview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_billpreview_CellContentClick);
             // 
-            // label10
+            // panel1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(443, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Bill Total";
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btn_process);
+            this.panel1.Controls.Add(this.btn_calSum);
+            this.panel1.Controls.Add(this.lbl_Amount);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.dgv_billpreview);
+            this.panel1.Location = new System.Drawing.Point(1052, 437);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(624, 592);
+            this.panel1.TabIndex = 12;
+            // 
+            // btn_process
+            // 
+            this.btn_process.Location = new System.Drawing.Point(462, 492);
+            this.btn_process.Name = "btn_process";
+            this.btn_process.Size = new System.Drawing.Size(139, 32);
+            this.btn_process.TabIndex = 3;
+            this.btn_process.Text = "Process";
+            this.btn_process.UseVisualStyleBackColor = true;
+            this.btn_process.Click += new System.EventHandler(this.btn_process_Click);
+            // 
+            // btn_calSum
+            // 
+            this.btn_calSum.Location = new System.Drawing.Point(18, 487);
+            this.btn_calSum.Name = "btn_calSum";
+            this.btn_calSum.Size = new System.Drawing.Size(75, 23);
+            this.btn_calSum.TabIndex = 2;
+            this.btn_calSum.Text = "Calculate";
+            this.btn_calSum.UseVisualStyleBackColor = true;
+            this.btn_calSum.Click += new System.EventHandler(this.btn_calSum_Click);
             // 
             // lbl_Amount
             // 
             this.lbl_Amount.AutoSize = true;
-            this.lbl_Amount.Location = new System.Drawing.Point(508, 25);
+            this.lbl_Amount.Location = new System.Drawing.Point(188, 492);
             this.lbl_Amount.Name = "lbl_Amount";
             this.lbl_Amount.Size = new System.Drawing.Size(13, 13);
             this.lbl_Amount.TabIndex = 1;
             this.lbl_Amount.Text = "0";
             // 
-            // btn_calSum
+            // label10
             // 
-            this.btn_calSum.Location = new System.Drawing.Point(335, 20);
-            this.btn_calSum.Name = "btn_calSum";
-            this.btn_calSum.Size = new System.Drawing.Size(75, 23);
-            this.btn_calSum.TabIndex = 2;
-            this.btn_calSum.Text = "Total";
-            this.btn_calSum.UseVisualStyleBackColor = true;
-            this.btn_calSum.Click += new System.EventHandler(this.btn_calSum_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(123, 492);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Bill Total";
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(1723, 62);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(60, 39);
+            this.btn_refresh.TabIndex = 13;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // frm_sale
             // 
@@ -578,6 +610,7 @@ namespace Inventory_v01
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
@@ -641,7 +674,7 @@ namespace Inventory_v01
         private System.Windows.Forms.ComboBox cmb_itemName;
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.DataGridView dgv_item;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_availableStock;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel2;
@@ -652,10 +685,12 @@ namespace Inventory_v01
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_category;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_calSum;
         private System.Windows.Forms.Label lbl_Amount;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btn_process;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

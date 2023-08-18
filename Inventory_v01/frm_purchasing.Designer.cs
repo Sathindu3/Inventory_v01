@@ -56,17 +56,18 @@ namespace Inventory_v01
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_purchase = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_itemCode = new System.Windows.Forms.TextBox();
+            this.cmb_itemName = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_quantity = new System.Windows.Forms.TextBox();
+            this.dtp_purchDate = new System.Windows.Forms.DateTimePicker();
+            this.cmb_customer = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_total = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -263,7 +264,7 @@ namespace Inventory_v01
             // 
             // btn_purchase
             // 
-            this.btn_purchase.Location = new System.Drawing.Point(427, 549);
+            this.btn_purchase.Location = new System.Drawing.Point(308, 114);
             this.btn_purchase.Name = "btn_purchase";
             this.btn_purchase.Size = new System.Drawing.Size(75, 23);
             this.btn_purchase.TabIndex = 4;
@@ -274,31 +275,31 @@ namespace Inventory_v01
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 82);
+            this.label1.Location = new System.Drawing.Point(23, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Item Name";
             // 
-            // textBox1
+            // txt_itemCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 6;
+            this.txt_itemCode.Location = new System.Drawing.Point(139, 37);
+            this.txt_itemCode.Name = "txt_itemCode";
+            this.txt_itemCode.Size = new System.Drawing.Size(154, 20);
+            this.txt_itemCode.TabIndex = 6;
             // 
-            // comboBox1
+            // cmb_itemName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cmb_itemName.FormattingEnabled = true;
+            this.cmb_itemName.Location = new System.Drawing.Point(138, 74);
+            this.cmb_itemName.Name = "cmb_itemName";
+            this.cmb_itemName.Size = new System.Drawing.Size(154, 21);
+            this.cmb_itemName.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 40);
+            this.label2.Location = new System.Drawing.Point(23, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 5;
@@ -307,7 +308,7 @@ namespace Inventory_v01
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 117);
+            this.label3.Location = new System.Drawing.Point(23, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 5;
@@ -331,34 +332,38 @@ namespace Inventory_v01
             this.label5.TabIndex = 5;
             this.label5.Text = "Customer";
             // 
-            // textBox2
+            // txt_quantity
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 6;
+            this.txt_quantity.Location = new System.Drawing.Point(139, 111);
+            this.txt_quantity.Name = "txt_quantity";
+            this.txt_quantity.Size = new System.Drawing.Size(154, 20);
+            this.txt_quantity.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // dtp_purchDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(138, 54);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtp_purchDate.CustomFormat = "yyyy-MM-dd";
+            this.dtp_purchDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_purchDate.Location = new System.Drawing.Point(138, 54);
+            this.dtp_purchDate.Name = "dtp_purchDate";
+            this.dtp_purchDate.Size = new System.Drawing.Size(200, 20);
+            this.dtp_purchDate.TabIndex = 8;
             // 
-            // comboBox2
+            // cmb_customer
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(138, 27);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cmb_customer.FormattingEnabled = true;
+            this.cmb_customer.Location = new System.Drawing.Point(138, 27);
+            this.cmb_customer.Name = "cmb_customer";
+            this.cmb_customer.Size = new System.Drawing.Size(154, 21);
+            this.cmb_customer.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.lbl_total);
+            this.groupBox1.Controls.Add(this.dtp_purchDate);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.btn_purchase);
+            this.groupBox1.Controls.Add(this.cmb_customer);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(113, 316);
             this.groupBox1.Name = "groupBox1";
@@ -370,18 +375,27 @@ namespace Inventory_v01
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmb_itemName);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txt_quantity);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_itemCode);
             this.groupBox2.Location = new System.Drawing.Point(113, 133);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(389, 161);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Location = new System.Drawing.Point(136, 91);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(31, 13);
+            this.lbl_total.TabIndex = 11;
+            this.lbl_total.Text = "Total";
             // 
             // frm_purchasing
             // 
@@ -391,10 +405,10 @@ namespace Inventory_v01
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_purchase);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frm_purchasing";
             this.Text = "Add purchasing";
+            this.Load += new System.EventHandler(this.frm_purchasing_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -435,16 +449,17 @@ namespace Inventory_v01
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button btn_purchase;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_itemCode;
+        private System.Windows.Forms.ComboBox cmb_itemName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt_quantity;
+        private System.Windows.Forms.DateTimePicker dtp_purchDate;
+        private System.Windows.Forms.ComboBox cmb_customer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lbl_total;
     }
 }

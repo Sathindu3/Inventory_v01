@@ -209,6 +209,7 @@ namespace Inventory_v01
             this.cmb_supplier.Name = "cmb_supplier";
             this.cmb_supplier.Size = new System.Drawing.Size(174, 29);
             this.cmb_supplier.TabIndex = 5;
+            this.cmb_supplier.SelectedIndexChanged += new System.EventHandler(this.cmb_supplier_SelectedIndexChanged);
             // 
             // txt_sellingPrice
             // 

@@ -32,6 +32,25 @@ namespace Inventory_v01
             dgv_item.DataSource = ds.Tables["dgv_item"].DefaultView;
 
         }
+        public void Add_itemToStock()
+        {
+            cls_connection.open_connection();
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO `stock` (item_name,quantity) VALUES (@item_name,@quantity)", cls_connection.con);
+            cmd.Parameters.Clear();
+
+            cmd.Parameters.AddWithValue("@item_name", txt_itemName.Text);
+            cmd.Parameters.AddWithValue("@quantity", 0);
+
+
+
+            cmd.ExecuteNonQuery();
+            cls_connection.close_connection();
+
+            MessageBox.Show("Order Added Successfully!");
+
+            fndataLoad();
+
+        }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -52,11 +71,20 @@ namespace Inventory_v01
 
             MessageBox.Show("Item Added Successfully!");
             fndataLoad();
+            Add_itemToStock();
+
+
+
         }
 
         private void frm_item_Load(object sender, EventArgs e)
         {
          fndataLoad();
+        }
+
+        private void cmb_supplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -128,11 +128,11 @@ namespace Inventory_v01
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(416, 471);
+            this.label3.Location = new System.Drawing.Point(374, 480);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 15);
+            this.label3.Size = new System.Drawing.Size(137, 15);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Wondersoft";
+            this.label3.Text = "GreenBug_solutions";
             // 
             // label4
             // 
@@ -140,9 +140,9 @@ namespace Inventory_v01
             this.label4.Font = new System.Drawing.Font("MS PGothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(124, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(333, 64);
+            this.label4.Size = new System.Drawing.Size(313, 64);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Wondersoft";
+            this.label4.Text = "Green Bug";
             // 
             // frm_login
             // 
